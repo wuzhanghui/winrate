@@ -43,8 +43,8 @@ if __name__ == '__main__':
     while 1:
         #print(os.path.getmtime('/content/gdrive/MyDrive/data/'))
         #print(os.path.getctime('/content/gdrive/MyDrive/data/'))
-        if not os.path.exists("/content/gdrive/data/"):
-            os.mkdir("/content/gdrive/data/")
+        if not os.path.exists("/content/gdrive/MyDrive/data/"):
+            os.mkdir("/content/gdrive/MyDrive/data/")
             os.mkdir('/content/gdrive/MyDrive/data/地上赢时局前预估/')
             os.mkdir('/content/gdrive/MyDrive/data/地下赢时局前预估/')
             os.mkdir('/content/gdrive/MyDrive/data/地主输时叫牌胜率/')
