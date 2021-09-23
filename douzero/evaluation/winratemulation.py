@@ -163,7 +163,7 @@ def mp_simulate(card_play_data_list, card_play_model_path_dict, q, output, bid_o
             # 新建对象writer
             writer = csv.writer(csvthree)
             # 写入，参数还是列表形式
-            print(sc)
+            #print(sc)
             writer.writerow(sc)
             csvthree.close()
             #os.system("pause")
@@ -209,7 +209,7 @@ def mp_simulate(card_play_data_list, card_play_model_path_dict, q, output, bid_o
             # 新建对象writer
             writer = csv.writer(csvthree)
             # 写入，参数还是列表形式
-            print(sc)
+            #print(sc)
             writer.writerow(sc)
             csvthree.close()
             #os.system("pause")
