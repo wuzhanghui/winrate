@@ -45,6 +45,18 @@ if __name__ == '__main__':
         #print(os.path.getctime('/content/gdrive/MyDrive/data/'))
         if os.path.exists("./rate/"):
             shutil.rmtree("./rate/")
+        if os.path.exists("/content/gdrive/MyDrive/data/"):
+            if time.time()- os.path.getmtime('/content/gdrive/MyDrive/data/') > 50000:
+                shutil.rmtree('/content/gdrive/MyDrive/data/')
+#                 os.mkdir("/content/gdrive/MyDrive/data/")
+#                 os.mkdir('/content/gdrive/MyDrive/data/地上赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地下赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时叫牌胜率/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时三家/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时叫牌胜率/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时三家/')
         if not os.path.exists("/content/gdrive/MyDrive/data/"):
             os.mkdir("/content/gdrive/MyDrive/data/")
             os.mkdir('/content/gdrive/MyDrive/data/地上赢时局前预估/')
@@ -56,18 +68,18 @@ if __name__ == '__main__':
             os.mkdir('/content/gdrive/MyDrive/data/地主赢时局前预估/')
             os.mkdir('/content/gdrive/MyDrive/data/地主赢时三家/')
 
-        if time.time()- os.path.getmtime('/content/gdrive/MyDrive/data/') > 36000:
-            a = input("超过10小时是否删除旧数据Y/N")
-            if a == "Y":
-                shutil.rmtree('/content/gdrive/MyDrive/data/')
-                os.mkdir('/content/gdrive/MyDrive/data/地上赢时局前预估/')
-                os.mkdir('/content/gdrive/MyDrive/data/地下赢时局前预估/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主输时叫牌胜率/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主输时局前预估/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主输时三家/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主赢时叫牌胜率/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主赢时局前预估/')
-                os.mkdir('/content/gdrive/MyDrive/data/地主赢时三家/')
+#         if time.time()- os.path.getmtime('/content/gdrive/MyDrive/data/') > 36000:
+#             a = input("超过10小时是否删除旧数据Y/N")
+#             if a == "Y":
+#                 shutil.rmtree('/content/gdrive/MyDrive/data/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地上赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地下赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时叫牌胜率/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主输时三家/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时叫牌胜率/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时局前预估/')
+#                 os.mkdir('/content/gdrive/MyDrive/data/地主赢时三家/')
 
 
         os.system("python generate_eval_data.py")
